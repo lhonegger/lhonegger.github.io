@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,6 +17,9 @@
             padding-top: 30px;
             padding-bottom: 60px;
             padding-left: 20px;
+        }
+        .card-header {
+            font-size: 1.5rem;
         }
         .active {
             background-color: #007bff !important;
@@ -35,7 +38,7 @@
 
         <div id="q-boxes">
 
-            <div class="card mb-4" style="width: 60rem;">
+            <div class="card mb-5" style="width: 60rem;">
 
                 <div class="card-header text-white bg-primary">
                     Personal Burnout
@@ -116,7 +119,7 @@
                 </div>
             </div> <!-- </card> -->
 
-            <div class="card mb-4" style="width: 60rem;">
+            <div class="card mb-5" style="width: 60rem;">
 
                 <div class="card-header text-white bg-primary">
                     Work-related Burnout
@@ -290,9 +293,9 @@
                 </div>
             </div> <!-- </card> -->
 
-            <div class="col-12">
-                <p class="text-danger" style="display:none;" id="select-error">Please answer all questions above and try again.</p>
+            <div class="btn-group">
                 <button onclick="showScores()" class="btn btn-primary">Calculate your scores</button>
+                <p class="text-danger" style="display:none;padding-left:20px;" id="select-error">You must answer <em>all</em> questions above to get your scores.</p>
             </div>
 
         </div>
@@ -303,9 +306,9 @@
                 Results
             </div>
 
-            <h4 id="personal-score">Average Personal Burnout Score: </h4>
-            <h4 id="work-score">Average Work-Related Burnout Score:  </h4>
-            <h4 id="client-score">Average Client-Related Burnout Score:  </h4>
+            <p style="padding-left:20px;padding-top:30px;font-size:150%;">Average Personal Burnout Score: <span style="color:red" id="personal-score"></span></p>
+            <p style="padding-left:20px;padding-top:10px;font-size:150%;">Average Work-Related Burnout Score: <span style="color:red" id="work-score"></span></p>
+            <p style="padding-left:20px;padding-top:10px;padding-bottom:30px;font-size:150%;">Average Client-Related Burnout Score: <span style="color:red" id="client-score"></span></p>
 
         </div>
 
@@ -319,9 +322,10 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
+    <!-- add listener for radio buttons -->
     <script>
-        var buttons = document.querySelectorAll(".btn").length;
-        for (var i = 0; i < buttons ; i++) {
+        var b = document.querySelectorAll(".btn").length;
+        for (var i = 0; i < b ; i++) {
             document.querySelectorAll(".btn")[i].addEventListener("click", function() {
                 forceSingleSelect();
             });
@@ -331,8 +335,7 @@
     <script>
 
         function showScores() {
-
-            // First check to make sure all questions (19 total) have an answer selected
+            // first check to make sure all questions (19 total) have an answer selected
             var a = document.querySelectorAll(".active");
             if (a.length < 19) {
                 document.getElementById("select-error").style.display = "block";
@@ -343,9 +346,13 @@
             var ws = document.getElementById("work-score");
             var cs = document.getElementById("client-score");
 
-            ps.innerText = ps.innerText + getPersonalScore() + getScoreCategory(getPersonalScore());
-            ws.innerText = ws.innerText + getWorkScore() + getScoreCategory(getWorkScore());
-            cs.innerText = cs.innerText + getClientScore() + getScoreCategory(getClientScore());
+            ps.innerText = ps.innerText + " " + getPersonalScore() + getScoreCategory(getPersonalScore());
+            ws.innerText = ws.innerText + " " + getWorkScore() + getScoreCategory(getWorkScore());
+            cs.innerText = cs.innerText + " " + getClientScore() + getScoreCategory(getClientScore());
+
+            ps.style.color = getScoreColor(getPersonalScore());
+            ws.style.color = getScoreColor(getWorkScore());
+            cs.style.color = getScoreColor(getClientScore());
 
             var q = document.getElementById("q-boxes");
             var s = document.getElementById("score-box");
@@ -362,6 +369,18 @@
                 return " (severe burnout)";
             } else {
                 return "";
+            }
+        };
+
+        function getScoreColor(scoreval) {
+            if (scoreval >= 50 && scoreval < 75) {
+                return "orange";
+            } else if (scoreval >= 75 && scoreval < 100) {
+                return "red";
+            } else if (scoreval == 100) {
+                return "maroon";
+            } else {
+                return "blue";
             }
         };
 
@@ -397,12 +416,10 @@
 
         function getSiblings(e) {
             var siblings = [];
-
             if(!e.parentNode) {
                 return siblings;
             }
             var sibling  = e.parentNode.firstChild;
-            
             while (sibling) {
                 if (sibling.nodeType === 1 && sibling !== e) {
                     siblings.push(sibling);
@@ -417,7 +434,7 @@
             for (i = 0; i < sibs.length; i++) {
                 sibs[i].classList.remove("active");
             }
-        }
+        };
 
     </script>
 
