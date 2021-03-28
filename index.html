@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Copenhagen Burnout Inventory</title>
+
+    <style>
+        body {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            padding-left: 20px;
+        }
+        .active {
+            background-color: #007bff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <div class="container-fluid">
+
+        <h1>Copenhagen Burnout Inventory</h1>
+        <p><em>Note: your responses are NOT being collected</em></p>
+
+        <div id="q-boxes">
+
+            <div class="card mb-4" style="width: 60rem;">
+
+                <div class="card-header text-white bg-primary">
+                    Personal Burnout
+                </div>
+
+                <div class="card-body" id="personal-qs">
+
+                    <div class="col-9 mb-3" id="personal-q1-box">
+                        <label for="personal-q1" class="form-label">1. How often do you feel tired?</label>
+                        <div class="btn-toolbar" role="group" id="personal-q1" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3" id="personal-q2-box">
+                        <label for="personal-q2" class="form-label">2. How often are you physically exhausted?</label>
+                        <div class="btn-toolbar" role="group" id="personal-q2" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-9 mb-3" id="personal-q3-box">
+                        <label for="personal-q3" class="form-label">3. How often are you emotionally exhausted?</label>
+                        <div class="btn-toolbar" role="group" id="personal-q3" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3" id="personal-q4-box">
+                        <label for="personal-q4" class="form-label">4. How often do you think: "I can't take it
+                            anymore?"</label>
+                        <div class="btn-toolbar" role="group" id="personal-q4" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3" id="personal-q5-box">
+                        <label for="personal-q5" class="form-label">5. How often do you feel worn out?</label>
+                        <div class="btn-toolbar" role="group" id="personal-q5" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3" id="personal-q6-box">
+                        <label for="personal-q6" class="form-label">6. How often do you feel weak and susceptible to
+                            illness?
+                        </label>
+                        <div class="btn-toolbar" role="group" id="personal-q6" data-toggle="buttons" aria-label="Personal inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- </card> -->
+
+            <div class="card mb-4" style="width: 60rem;">
+
+                <div class="card-header text-white bg-primary">
+                    Work-related Burnout
+                </div>
+
+                <div class="card-body" id="work-qs">
+
+                    <div class="col-12 mb-3">
+                        <label for="work-q1" class="form-label">1. Is your work emotionally exhausting?</label>
+                        <div class="btn-toolbar" role="group" id="work-q1" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="work-q2" class="form-label">2. Do you feel burnt out because of your work?</label>
+                        <div class="btn-toolbar" role="group" id="work-q2" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-9 mb-3">
+                        <label for="work-q3" class="form-label">3. Does your work frustrate you?</label>
+                        <div class="btn-toolbar" role="group" id="work-q3" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="work-q4" class="form-label">4. Do you feel worn out at the end of the working
+                            day?</label>
+                        <div class="btn-toolbar" role="group" id="work-q4" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="work-q5" class="form-label">5. Are you exhausted in the morning at the thought of
+                            another day at work?</label>
+                        <div class="btn-toolbar" role="group" id="work-q5" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="work-q6" class="form-label">6. Do you feel that every working hour is tiring for
+                            you?</label>
+                        <div class="btn-toolbar" role="group" id="work-q6" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="work-q7" class="form-label">7. Do you have enough energy for family and friends
+                            during leisure time?</label>
+                        <div class="btn-toolbar" role="group" id="work-q7" data-toggle="buttons" aria-label="work inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Always</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- </card> -->
+
+            <div class="card mb-4" style="width: 60rem;">
+
+                <div class="card-header text-white bg-primary">
+                    Client-related Burnout
+                </div>
+
+                <div class="card-body" id="client-qs">
+
+                    <div class="col-12 mb-3">
+                        <label for="client-q1" class="form-label">1. Do you find it hard to work with clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q1" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="client-q2" class="form-label">2. Do you find it frustrating to work with
+                            clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q2" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="client-q3" class="form-label">3. Does it drain your energy to work with
+                            clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q3" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="client-q4" class="form-label">4. Do you feel that you give more than you get back
+                            when you work with clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q4" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>To a Very Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>To a Low Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Somewhat</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>To a High Degree</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>To a Very High Degree</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="client-q5" class="form-label">5. Are you tired of working with clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q5" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="client-q6" class="form-label">6. Do you sometimes wonder how long you will be able
+                            to continue working with clients?</label>
+                        <div class="btn-toolbar" role="group" id="client-q6" data-toggle="buttons" aria-label="client inventory question">
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=0>Never/Almost Never</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=25>Seldom</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=50>Sometimes</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=75>Often</button>
+                            <button type="radio" class="btn btn-secondary mr-2" autocomplete="off" value=100>Always</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- </card> -->
+
+            <div class="col-12">
+                <p class="text-danger" style="display:none;" id="select-error">Please answer all questions above and try again.</p>
+                <button onclick="showScores()" class="btn btn-primary">Calculate your scores</button>
+            </div>
+
+        </div>
+
+        <div class="card mb-4" style="width: 60rem; display:none;" id="score-box">
+
+            <div class="card-header text-white bg-primary">
+                Results
+            </div>
+
+            <h4 id="personal-score">Average Personal Burnout Score: </h4>
+            <h4 id="work-score">Average Work-Related Burnout Score:  </h4>
+            <h4 id="client-score">Average Client-Related Burnout Score:  </h4>
+
+        </div>
+
+    </div>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var buttons = document.querySelectorAll(".btn").length;
+        for (var i = 0; i < buttons ; i++) {
+            document.querySelectorAll(".btn")[i].addEventListener("click", function() {
+                forceSingleSelect();
+            });
+        }
+    </script>
+
+    <script>
+
+        function showScores() {
+
+            // First check to make sure all questions (19 total) have an answer selected
+            var a = document.querySelectorAll(".active");
+            if (a.length < 19) {
+                document.getElementById("select-error").style.display = "block";
+                return;
+            }
+
+            var ps = document.getElementById("personal-score");
+            var ws = document.getElementById("work-score");
+            var cs = document.getElementById("client-score");
+
+            ps.innerText = ps.innerText + getPersonalScore() + getScoreCategory(getPersonalScore());
+            ws.innerText = ws.innerText + getWorkScore() + getScoreCategory(getWorkScore());
+            cs.innerText = cs.innerText + getClientScore() + getScoreCategory(getClientScore());
+
+            var q = document.getElementById("q-boxes");
+            var s = document.getElementById("score-box");
+            q.style.display = "none";
+            s.style.display = "block";
+        };
+
+        function getScoreCategory(scoreval) {
+            if (scoreval >= 50 && scoreval < 75) {
+                return " (moderate burnout)";
+            } else if (scoreval >= 75 && scoreval < 100) {
+                return " (high burnout)";
+            } else if (scoreval == 100) {
+                return " (severe burnout)";
+            } else {
+                return "";
+            }
+        };
+
+        function getPersonalScore() {
+            var q = document.getElementById("personal-qs");
+            var a = q.querySelectorAll(".active");
+            var i; var t = 0;
+            for (i = 0; i < a.length; i++) {
+                t = t + parseInt(a[i].value);
+            }
+            return Math.round(t/a.length);
+        };
+
+        function getWorkScore() {
+            var q = document.getElementById("work-qs");
+            var a = q.querySelectorAll(".active");
+            var i; var t = 0;
+            for (i = 0; i < a.length; i++) {
+                t = t + parseInt(a[i].value);
+            }
+            return Math.round(t/a.length);
+        };
+
+        function getClientScore() {
+            var q = document.getElementById("client-qs");
+            var a = q.querySelectorAll(".active");
+            var i; var t = 0;
+            for (i = 0; i < a.length; i++) {
+                t = t + parseInt(a[i].value);
+            }
+            return Math.round(t/a.length);
+        };
+
+        function getSiblings(e) {
+            var siblings = [];
+
+            if(!e.parentNode) {
+                return siblings;
+            }
+            var sibling  = e.parentNode.firstChild;
+            
+            while (sibling) {
+                if (sibling.nodeType === 1 && sibling !== e) {
+                    siblings.push(sibling);
+                }
+                sibling = sibling.nextSibling;
+            }
+            return siblings;
+        };
+
+        function forceSingleSelect() {
+            var sibs = getSiblings(event.target);
+            for (i = 0; i < sibs.length; i++) {
+                sibs[i].classList.remove("active");
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
